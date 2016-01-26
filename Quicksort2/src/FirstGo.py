@@ -36,6 +36,10 @@ Print every partitioned sub-array on a new line.
 
 ----------------------
 
+Notes: Some coders separated partition and quicksort, I guess reusing most
+of the partition function from quicksort1. I'm not sure this is helpful
+- it doesn't reduced the code length, and the partition is the quick sort.
+
 Created on 26 Jan 2016
 
 @author: chris
@@ -50,17 +54,17 @@ def partition(ar):
             arGteP.append(a)
         else:
             arLtP.append(a)
-    
+
+    if len(arLtP) > 1:
+        arLtP = partition(arLtP)    
     if len(arGteP) > 1:
         arGteP = partition(arGteP)
-    if len(arLtP) > 1:
-        partition(arLtP)
-    
+        
     arOut = arLtP + [p] + arGteP 
     for a in arOut: print a,
+    print
     return arOut
     
-
 input()
 ar = map(int, raw_input().strip().split())
 partition(ar)
