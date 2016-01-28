@@ -3,7 +3,7 @@ Using http://www.nayuki.io/page/next-lexicographical-permutation-algorithm
 
 I missed the "reverse the suffix" at the end, but otherwise was fine.
 
-Is interesting to read someone right this stuff with words. Half the battle
+Is interesting to read someone write this stuff with words. Half the battle
 I'd guess.
 
 Created on 27 Jan 2016
