@@ -8,8 +8,8 @@ Created on 30 Jan 2016
 
 import collections
 
-input()
-ar = map(int,raw_input().strip().split())
+n = input()
+ar = []
 counts = collections.Counter(ar)
 
 for i in range(0, 100):
