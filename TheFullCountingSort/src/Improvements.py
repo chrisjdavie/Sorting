@@ -36,17 +36,22 @@ Created on 30 Jan 2016
 '''
 from collections import deque
 
+arText = {}
 lim = 100
-arText = [ deque([]) for _ in range(lim) ]
-
+ar = [0]*100
 N = input()
 for i in range(N):
     num, text = raw_input().strip().split()
     num = int(num)
-    if i < N/2: text = '-'
-    arText[num].append(text)
+    ar[num] += 1
+    if i < N/2:
+        text = '-'
+    try:
+        arText[num].append(text)
+    except KeyError:
+        arText[num] = deque([text])
 
-for a in arText:
-    while len(a) > 0:
-        print a.popleft(),
+opAr = [ arText[num].popleft() for num, count in enumerate(ar) for _ in range(count) ]
+
+print " ".join(opAr)
         
