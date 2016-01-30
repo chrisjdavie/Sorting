@@ -28,3 +28,12 @@ Created on 30 Jan 2016
 
 @author: chris
 '''
+
+input()
+ar = map(int,raw_input().strip().split())
+counts = [0]*100
+
+for a in ar: counts[a] += 1
+for i, count in enumerate(counts): 
+    for _ in range(count):
+        print i,
