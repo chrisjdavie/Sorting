@@ -26,3 +26,12 @@ Created on 31 Jan 2016
 
 @author: chris
 '''
+
+input()
+nums = map(int, raw_input().strip().split())
+nums.sort()
+if len(nums)%2 == 0:
+    median = (nums[len(nums)/2] - nums[len(nums)/2+1])/2.0
+else:
+    median = nums[len(nums)/2]
+print median
